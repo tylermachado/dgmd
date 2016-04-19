@@ -37,12 +37,14 @@
 	<script type="text/javascript">
 		var body = document.querySelector("body");
 
-		body.addEventListener("mousemove", getPos, false);
+		body.addEventListener("touchstart", getPos, false);
 
 		function getPos() {
-			var x = event.clientX;    
-			var y = event.clientY; 
-			console.log("X: ", x, ", Y: ", y);
+			var i;
+			  for (i=0; i < e.touches.length; i++) {
+			    console.log("touchpoint[" + i + "].screenX = " + e.touches[i].screenX);
+			    console.log("touchpoint[" + i + "].screenY = " + e.touches[i].screenY);
+			  }
 		}
 	</script>
 </body>
