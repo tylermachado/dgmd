@@ -129,6 +129,16 @@ function handleEnd(evt) {
   }
 }
 
+function handleCancel(evt) {
+  evt.preventDefault();
+  log("touchcancel.");
+  var touches = evt.changedTouches;
+  
+  for (var i = 0; i < touches.length; i++) {
+    ongoingTouches.splice(i, 1);  // remove it; we're done
+  }
+}
+
 	</script>
 </body>
 </html>
