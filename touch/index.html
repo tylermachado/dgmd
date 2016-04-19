@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tyler Machado's DGMD E-15 journal</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="Tyler Machado">
+	<style type="text/css">
+		body {
+			font-family: Helvetica, sans-serif;
+		    line-height: 1.5;
+		    font-weight: 400;
+		    color: #3E3E3E;
+		    background-color:#fdfdfd;
+		    margin:0 auto;
+		    padding:0 10px;
+		}
+
+		hr {
+			border: 1px dashed #d0d0d0;
+		}
+
+		.square {
+			height:300px;
+			width:300px;
+			background-color:gray;
+		}
+	</style>
+</head>
+
+<body> 
+	<div class="square"></div>
+
+
+
+	<script type="text/javascript">
+		var body = document.querySelector("body");
+
+		body.addEventListener("mousemove", getPos, false);
+
+		function getPos() {
+			var x = event.clientX;    
+			var y = event.clientY; 
+			console.log("X: ", x, ", Y: ", y);
+		}
+	</script>
+</body>
+</html>
