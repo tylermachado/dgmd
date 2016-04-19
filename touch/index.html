@@ -39,7 +39,7 @@
 
 		body.addEventListener("touchstart", getPos, false);
 
-		function getPos() {
+		function getPos(e) {
 			var i;
 			  for (i=0; i < e.touches.length; i++) {
 			    console.log("touchpoint[" + i + "].screenX = " + e.touches[i].screenX);
