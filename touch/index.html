@@ -130,9 +130,9 @@ function handleCancel(evt) {
 }
 
 function colorForTouch(touch) {
-  var r = touch.pageX % 16;
-  var g = Math.floor(touch.pageY / 3) % 16;
-  var b = Math.floor(touch.pageY / 7) % 16;
+  var r = touch.pageX;
+  var g = touch.pageY;
+  var b = touch.pageY;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
