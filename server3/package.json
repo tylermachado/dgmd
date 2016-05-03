@@ -1,7 +1,7 @@
 {
-   "name": "MiniDoodle",
-   "description": "Collaborative drawing canvas",
-   "author": "Code-and.Coffee",
+   "name": "DGMD project",
+   "description": "weirdness",
+   "author": "tyler",
    "dependencies" : {
       "express": "4.x",
       "socket.io": "*"

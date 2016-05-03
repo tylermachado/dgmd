@@ -3,12 +3,14 @@ var express = require('express'),
     http = require('http'),
     socketIo = require('socket.io');
 
+    var port = process.env.PORT || 8080;
+
  var color;
 
 // start webserver on port 8080
 var server =  http.createServer(app);
 var io = socketIo.listen(server);
-server.listen(8080);
+server.listen(port);
 // add directory with our static files
 app.use(express.static(__dirname + '/public'));
 console.log("Server running on 127.0.0.1:8080");
@@ -25,5 +27,13 @@ io.on('connection', function (socket) {
 
       // send line to all clients
       io.emit('changecolor', color);
+   });
+
+
+   // add handler for message type "changecolor".
+   socket.on('mousetype', function (data) {
+
+      // send line to all clients
+      io.emit('logmouse', data);
    });
 });
