@@ -1,0 +1,9 @@
+* {
+  font-family:National,sans-serif;
+  margin:0;
+  font-size:1em;
+}
+
+body, html {
+  height:inherit;
+}

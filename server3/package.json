@@ -1,9 +1,0 @@
-{
-   "name": "DGMD project",
-   "description": "weirdness",
-   "author": "tyler",
-   "dependencies" : {
-      "express": "4.x",
-      "socket.io": "*"
-   }
-}
